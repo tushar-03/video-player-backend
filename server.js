@@ -10,9 +10,9 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-    origin: '*',
+    origin: '*', // Allow all origins for testing; replace with your frontend URL in production
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true
+    allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
 
